@@ -58,8 +58,7 @@ define(['N/log', 'N/record', 'N/search'],
                         1: 3,
                         3: 13,
                         6: 36,
-                      }
-                      
+                      }                 
                       const subDep = subDepLookup[tranSub] || 3;
                       
                       unbilledJournal.selectNewLine({sublistId: 'line'});
@@ -164,8 +163,6 @@ define(['N/log', 'N/record', 'N/search'],
                         value: tranClass
                       });
                       unbilledJournal.commitLine({sublistId: 'line'});
-
-
             
                       var journalId = unbilledJournal.save();
                       log.debug('JE Created :', journalId);
@@ -174,11 +171,9 @@ define(['N/log', 'N/record', 'N/search'],
                         type:record.Type.JOURNAL_ENTRY,
                         id:journalId,
                         values:{
-                            'custbody_unbilled_pb_backlink':recordId,
-                            
+                            'custbody_unbilled_pb_backlink':recordId,                 
                         }
                     });
-
 
                       record.submitFields({
                         type:record.Type.SALES_ORDER,
@@ -188,10 +183,6 @@ define(['N/log', 'N/record', 'N/search'],
                             
                         }
                     });
-
-                    
-
-
 
                 } catch (e) {
                     log.error('Error Updating Record', 'ID: ' + recordId + ', Error: ' + e.message + ', Stack: ' + e.stack);
