@@ -1,0 +1,1 @@
+This is a repository of SuiteScript files that I am actively working on. As a novice, I often use the repository to share read-only versions of my scripts with other SuiteScript developers for guidance and feedback. 
